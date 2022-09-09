@@ -6,10 +6,18 @@ inputs:
     description: 'URL of pushgateway'
     required: true
     default: 'http://localhost:9091/metrics/'
+  job:  # id of input
+    description: 'Job name'
+    required: true
+    default: 'JobA'
   metric_name:
     description: "The name of the metric you want to create/update"
     required: true
-    default: "metric_name"
+    default: "new_metric"
+  metric_description:
+    description: "The description of the metric you want to create/update"
+    required: true
+    default: "metric description"
   metric_labels:
     description: "The list of labels for your metric"
     required: false

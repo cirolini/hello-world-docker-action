@@ -7,10 +7,12 @@ jobs:
     steps:
       - name: POST on Pushgateway
         id: post
-        uses: cirolini/hello-world-docker-action@v1.1
+        uses: cirolini/hello-world-docker-action@v1.3
         with:
           pushgateway_url: 'Cirolini the boss'
+          job: "JobB"
           metric_name: "Cirolini"
+          metric_description: "Cirolini is the best"
           metric_labels: "{'first_name': 'John', 'last_name': 'Doe' }"
       # Use the output from the `hello` step
       - name: Get the output
