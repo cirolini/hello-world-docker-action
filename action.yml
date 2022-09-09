@@ -30,5 +30,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.pushgateway_url }}
+    - ${{ inputs.job }}
     - ${{ inputs.metric_name }}
+    - ${{ inputs.metric_description }}
     - ${{ inputs.metric_labels }}

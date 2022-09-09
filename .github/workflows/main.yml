@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: POST on Pushgateway
         id: post
-        uses: cirolini/hello-world-docker-action@v1.5
+        uses: cirolini/hello-world-docker-action@v1.6
         with:
-          pushgateway_url: 'Cirolini the boss'
+          pushgateway_url: 'localhost:9091'
           job: "JobB"
           metric_name: "Cirolini"
           metric_description: "Cirolini is the best"
