@@ -20,8 +20,8 @@ inputs:
     default: "metric description"
   metric_labels:
     description: "The list of labels for your metric"
-    required: false
-    default: ""
+    required: true
+    default: "{'version': '1.0'}"
 outputs:
   status: # id of output
     description: 'Return status code'

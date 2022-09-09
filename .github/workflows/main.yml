@@ -13,7 +13,7 @@ jobs:
           job: "JobB"
           metric_name: "Cirolini"
           metric_description: "Cirolini is the best"
-          metric_labels: "{'first_name': 'John', 'last_name': 'Doe' }"
+          metric_labels: "{'version': '1.0'}"
       # Use the output from the `hello` step
       - name: Get the output
         run: echo "The time was ${{ steps.post.outputs.status }}"
