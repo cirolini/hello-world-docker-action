@@ -1,14 +1,22 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Pushgateway POST'
+description: 'Post a metric to Pushgateway'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  pushgateway_url:  # id of input
+    description: 'URL of pushgateway'
     required: true
-    default: 'World'
+    default: 'http://localhost:9091/metrics/'
+  metric_name:
+    description: "The name of the metric you want to create/update"
+    required: true
+    default: "metric_name"
+  metric_labels:
+    description: "The list of labels for your metric"
+    required: false
+    default: ""
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  status: # id of output
+    description: 'Return status code'
 runs:
   using: 'docker'
   image: 'Dockerfile'

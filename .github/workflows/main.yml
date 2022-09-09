@@ -3,13 +3,15 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: POST on Pushgateway
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: POST on Pushgateway
+        id: post
         uses: actions/hello-world-docker-action@v1
         with:
-          who-to-greet: 'Cirolini the boss'
+          pushgateway_url: 'Cirolini the boss'
+          metric_name: "Cirolini"
+          metric_labels: "{'first_name': 'John', 'last_name': 'Doe' }"
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Get the output
+        run: echo "The time was ${{ steps.post.outputs.status }}"
