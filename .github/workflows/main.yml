@@ -11,11 +11,11 @@ jobs:
         id: post
         uses: cirolini/hello-world-docker-action@v1.7
         with:
-          pushgateway_url: 'localhost:9091'
+          pushgateway_url: 'https://31dd-189-6-240-216.sa.ngrok.io/'
           job: "JobB"
           metric_name: "Cirolini"
           metric_description: "Cirolini is the best"
-          metric_labels: "{'version': '1.0'}"
+          metric_labels: "{'version': '2.0'}"
       # Use the output from the `hello` step
       - name: Get the output
         run: echo "The time was ${{ steps.post.outputs.status }}"
