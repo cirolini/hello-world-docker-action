@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: POST on Pushgateway
         id: post
-        uses: actions/hello-world-docker-action
+        uses: actions/hello-world-docker-action@v1
         with:
           pushgateway_url: 'Cirolini the boss'
           metric_name: "Cirolini"
