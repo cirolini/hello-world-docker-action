@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: POST on Pushgateway
         id: post
-        uses: cirolini/hello-world-docker-action@v1.3
+        uses: cirolini/hello-world-docker-action@v1.4
         with:
           pushgateway_url: 'Cirolini the boss'
           job: "JobB"
