@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: POST on Pushgateway
     steps:
+      - name: Star local Pushgateway
+        run: docker run -d -p 9091:9091 prom/pushgateway
       - name: POST on Pushgateway
         id: post
         uses: cirolini/hello-world-docker-action@v1.7
